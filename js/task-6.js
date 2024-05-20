@@ -13,17 +13,16 @@ function createBoxes(amount) {
 
   let width = 30;
   let height = 30;
+  let boxesHTML = '';
 
   for (let i = 0; i < amount; i++) {
-    const div = document.createElement('div');
-    div.style.backgroundColor = getRandomHexColor();
-    div.style.width = `${width}px`;
-    div.style.height = `${height}px`;
-    container.appendChild(div);
+    const color = getRandomHexColor();
+    boxesHTML += `<div style="background-color: ${color}; width: ${width}px; height: ${height}px; margin: 5px;"></div>`;
 
     width += 10;
     height += 10;
   }
+  container.insertAdjacentHTML('beforeend', boxesHTML);
 }
 
 function getRandomHexColor() {

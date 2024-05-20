@@ -7,6 +7,7 @@ function getRandomHexColor() {
     .padStart(6, 0)}`; 
 };
 button.addEventListener('click', function() {
-  color.textContent = getRandomHexColor();
-  body.style.backgroundColor = getRandomHexColor();
+ const randomColor = getRandomHexColor();
+  color.textContent = randomColor ;
+  body.style.backgroundColor = randomColor;
 })
